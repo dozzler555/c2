@@ -26,6 +26,6 @@ task:
 
     build_script: # Actual build script foreground
 
-      - bash build # Build script to run
+      - bash build.sh # Build script to run
 
     
