@@ -26,6 +26,6 @@ task:
 
     build_script: # Actual build script foreground
 
-      - sudo bash build # Build script to run
+      - bash build # Build script to run
 
     
