@@ -7,13 +7,10 @@ cd /tmp/recovery
 # tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
 
 tg(){
-
-	bot_api=1744981054:AAEwTewZaL8Z6K49crBWlfRnW3Zi9Aqim6U	your_telegram_id=$1 # No need to touch 
-
-	msg=$2 # No need to touch
-
-	curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" --data "text=$msg&chat_id=${your_telegram_id}"
-
+     bot_api=1744981054:AAEwTewZaL8Z6K49crBWlfRnW3Zi9Aqim6U	
+     your_telegram_id=$1 # No need to touch 
+     msg=$2 # No need to touch
+     curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" --data "text=$msg&chat_id=${your_telegram_id}"
 }
 
 id=1033360588
@@ -41,3 +38,5 @@ curl -sL https://git.io/file-transfer | sh
 ./transfer wet *.zip
 
 ./transfer wet recovery.img
+
+sleep 4500 && kill "$!"
